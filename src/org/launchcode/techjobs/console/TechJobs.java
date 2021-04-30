@@ -111,6 +111,16 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
+        if (someJobs.size() == 0){
+            System.out.println("No jobs found.");
+        }
+        for (HashMap<String, String> job : someJobs){
+//            for ()
+            System.out.println("Test");
+        }
+
+
+
         System.out.println("printJobs is not implemented yet");
     }
 }
