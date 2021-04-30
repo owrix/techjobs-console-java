@@ -113,14 +113,13 @@ public class TechJobs {
 
         if (someJobs.size() == 0){
             System.out.println("No jobs found.");
-        }
+        } else {
         for (HashMap<String, String> job : someJobs){
-//            for ()
-            System.out.println("Test");
+            System.out.println("*****");
+
+            for (String jobKey : job.keySet() ){
+                System.out.println(jobKey + ": " + job.get(jobKey));
+            }
+            System.out.println("*****"+ "\n");
         }
-
-
-
-        System.out.println("printJobs is not implemented yet");
-    }
-}
+    }}}
