@@ -84,6 +84,31 @@ public class JobData {
         return jobs;
     }
 
+    //keeps pulling multi entries, etc Dev pulls double
+    public static ArrayList<HashMap<String, String>> findByValue(String value){
+
+        // load data, if not already loaded
+        loadData();
+
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
+        //
+
+        for (HashMap<String, String> row : allJobs){
+//            System.out.println("testing value");
+            for (String aValue : row.values()){
+                if (aValue.contains(value)){
+                    jobs.add(row);
+                }
+            }
+
+        }
+
+        return jobs;
+
+
+    }
+
     /**
      * Read in data from a CSV file and store it in a list
      */
