@@ -95,11 +95,13 @@ public class JobData {
         //
 
         for (HashMap<String, String> row : allJobs){
-//            System.out.println("testing value");
-            for (String aValue : row.values()){
-                if (aValue.toLowerCase().contains(value.toLowerCase())){
+            for (String key : row.keySet()){
+                String aKey = row.get(key);
+                if (aKey.toLowerCase().contains(value.toLowerCase())){
                     jobs.add(row);
+                break;
                 }
+
             }
 
         }
